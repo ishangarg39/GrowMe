@@ -1,6 +1,6 @@
-import * as React from 'react';
+import{useState,useEffect} from "react"
 import Box from '@mui/material/Box';
-import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import DepartmentList from './DepartmentList';
 
 const columns: GridColDef[] = [
@@ -31,9 +31,9 @@ const columns: GridColDef[] = [
 
 
 export default function DataGridDemo() {
-  const [rows, setRows] = React.useState<any[]>([]);
+  const [rows, setRows] =useState<any[]>([]);
 
-  React.useEffect( 
+  useEffect( 
     ()=>{
     const load=async () => {
     console.log("cDm");
